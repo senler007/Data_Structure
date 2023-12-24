@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-const int N = 1010;
+const int N = 1010, null = 0x3f3f3f3f;
 
 //一般哈希，两种方法，一种为拉链法，一种为开放寻址法
 
