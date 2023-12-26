@@ -10,7 +10,7 @@ using namespace std;
 
 const int N = 100010;
 int n, m;
-int p[N];
+int p[N];//祖宗节点
 
 struct Edge {
     int a, b, w;
@@ -39,7 +39,9 @@ int main() {
         p[i] = i;
     }
 
-    int res = 0, cnt = 0;
+    int res = 0, cnt = 0;//res:存储权重，cnt：存储当前有多少条边加入集合
+
+    //以边枚举，有边即可把两点加入一个集合中
     for (int i = 0;i < m;i++) {
         int a, b, w;
         a = edges[i].a, b = edges[i].b, w = edges[i].w;
